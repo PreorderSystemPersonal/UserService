@@ -34,12 +34,6 @@ public class UserEntity {
     private String profileImagePath; // 프로필 이미지 경로
 
 
-    //팔로우
-//    @OneToMany(mappedBy = "following",fetch = FetchType.LAZY)
-//    private List<FollowEntity> followings;
-//    @OneToMany(mappedBy = "follower",fetch = FetchType.LAZY)
-//    private List<FollowEntity> followers;
-
     private String role; // 권한
 
 
@@ -102,13 +96,5 @@ public class UserEntity {
         this.profileImagePath = profileImagePath;
     }
 
-//    public List<FollowEntity> getFollowers() {
-//        return followers;
-//    }
-//
-//    // FollowingList에 대한 getter 메서드
-//    public List<FollowEntity> getFollowing() {
-//        return followings;
-//    }
 
 }

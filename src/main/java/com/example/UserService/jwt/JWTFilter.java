@@ -71,7 +71,6 @@ public class JWTFilter extends OncePerRequestFilter {
             // Redis에 해당 email을 키로 하는 데이터가 존재하지 않음
             System.out.println("redis에서 email을 찾을 수 없음 " + email);
             ResponseEntity.status(HttpStatus.OK).body("로그아웃된 회원입니다.");
-//            response.getWriter().write("로그아웃된 회원입니다."); // 메시지 작성하여 반환
             return;
         }
         String tokenFromRedis = redisUtil.getData(email);
@@ -79,7 +78,6 @@ public class JWTFilter extends OncePerRequestFilter {
             // Redis에 해당 emaile을 키로 하는 데이터와 토큰이 일치하지 않음
             System.out.println("email 정보는 있지만 토큰이 없음: " + email);
             ResponseEntity.status(HttpStatus.OK).body("로그아웃된 회원입니다.");
-//            response.getWriter().write("로그아웃된 회원입니다."); // 메시지 작성하여 반환
             return;
         }
 

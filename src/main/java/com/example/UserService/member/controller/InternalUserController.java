@@ -24,9 +24,4 @@ public class InternalUserController {
     public ResponseEntity<Boolean> checkUserExists(@RequestParam(name="userId") Long followerId){
         return ResponseEntity.ok().body(userRepository.existsById(followerId));
     }
-//    @GetMapping
-//    public ResponseEntity<UserEntity> getUserById(@PathVariable Long userId) {
-//        UserEntity user = internalUserService.findUserById(userId);
-//        return ResponseEntity.ok(user);
-//    }
 }

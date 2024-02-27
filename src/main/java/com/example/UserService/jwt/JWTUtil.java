@@ -21,7 +21,6 @@ public class JWTUtil {
     //토큰 생성-이메일로 구현
     public String createJwt(String email, String role, Long expiredMs) {
         return Jwts.builder()
-                //.claim("username", username)//유저 이름을 토큰으로 설정
                 .claim("email",email) //유저 이메일을 토큰으로 설정
                 .claim("role", role)
                 .issuedAt(new Date(System.currentTimeMillis()))
